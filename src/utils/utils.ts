@@ -7,10 +7,10 @@ function getLocation(dx: number, dy: number) {
   const sign2 = dx > 0 ? 1 : -1;
   const sign = directSign ? sign1 * sign2 : sign2;
 
-  const group1 = [0.5 - sign * t / 2, 0.5 + sign * t / 2];
+  const group1 = [0.5 - (sign * t) / 2, 0.5 + (sign * t) / 2];
   const group2 = sign > 0 ? [0, 1] : [1, 0];
   const group = [...group1, ...group2];
-  const keys = directSign ? ['x', 'x2', 'y', 'y2'] : ['y', 'y2', 'x', 'x2'];
+  const keys = directSign ? ["x", "x2", "y", "y2"] : ["y", "y2", "x", "x2"];
 
   const res: Record<string, number> = {};
   keys.forEach((k, idx) => {
@@ -32,9 +32,7 @@ function getCoordinates(startArc: number, endArc: number) {
   return getLocation(dx, dy);
 }
 
-
-
-export function getLinearGradientLayout(data: { x: string, y: number }[]) {
+export function getLinearGradientLayout(data: { x: string; y: number }[]) {
   const startAngle = 0;
   const endAngle = Math.PI * 2;
   const totalValue = data.reduce((sum, d) => sum + d.y, 0);
@@ -51,3 +49,10 @@ export function getLinearGradientLayout(data: { x: string, y: number }[]) {
   return layout;
 }
 
+export function sleep(time: number) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(time);
+    }, time);
+  });
+}

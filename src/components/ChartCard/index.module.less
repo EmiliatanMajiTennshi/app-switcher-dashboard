@@ -1,0 +1,57 @@
+// eslint-disable
+.card-title {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+}
+.card-title::before {
+  content: "";
+  width: 6px;
+  margin-right: 10px;
+  background-color: rgb(102, 191, 216);
+}
+.card-title::after {
+  content: "";
+  width: 6px;
+  margin-left: 10px;
+  background-color: rgb(102, 191, 216);
+}
+.card-children {
+  margin-top: 10px;
+  background: linear-gradient(to left, rgb(89, 162, 247), rgb(89, 162, 247))
+      left top no-repeat,
+    linear-gradient(to bottom, rgb(89, 162, 247), rgb(89, 162, 247)) left top
+      no-repeat,
+    linear-gradient(to left, rgb(89, 162, 247), rgb(89, 162, 247)) right top
+      no-repeat,
+    linear-gradient(to bottom, rgb(89, 162, 247), rgb(89, 162, 247)) right top
+      no-repeat,
+    linear-gradient(to left, rgb(89, 162, 247), rgb(89, 162, 247)) left bottom
+      no-repeat,
+    linear-gradient(to bottom, rgb(89, 162, 247), rgb(89, 162, 247)) left bottom
+      no-repeat,
+    linear-gradient(to left, rgb(89, 162, 247), rgb(89, 162, 247)) right bottom
+      no-repeat,
+    linear-gradient(to left, rgb(89, 162, 247), rgb(89, 162, 247)) right bottom
+      no-repeat;
+  background-size: 2px 30px, 80px 2px, 2px 30px, 80px 2px;
+}
+.card-bg {
+  position: relative;
+  background-color: rgba(187, 188, 238, 0.02);
+  margin: 2px;
+  display: table-caption;
+  height: 90px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* 阴影 */
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 背景模糊 */
+  backdrop-filter: blur(5px);
+}
+.card-container {
+  margin: 0 10px;
+}
